@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'cvg/style.css' %}?v=1.0">
+    <title>CV Generator</title>
+    <meta charset="UTF-8">
+    <title>CV Generator</title>
+</head>
+<body>
+<h2>CV Generator</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="group">
+        <div class="user-box">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Name:</label>
+        </div>
+        <div class="user-box">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+        </div>
+        <div class="user-box">
+            <input type="tel" id="mobile" name="mobile" required>
+            <label for="mobile">Mobile:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="summary" name="summary" required></textarea>
+            <label for="summary">Summary:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="skills" name="skills" required></textarea>
+            <label for="skills">Skills:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="experience" name="experience" required></textarea>
+            <label for="experience">Experience:</label>
+
+        </div>
+        <div class="user-box">
+            <textarea id="education" name="education" required></textarea>
+            <label for="education">Education:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="projects" name="projects" required></textarea>
+            <label for="projects">Projects:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="interests" name="interests" required></textarea>
+            <label for="interests">Interests:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="personal_info" name="personal_info" required></textarea>
+            <label for="personal_info">Personal Information:</label>
+
+        </div>
+        <div class="user-box">
+            <textarea id="work_experience" name="work_experience" required></textarea>
+            <label for="work_experience">Work Experience:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="previous_employment" name="previous_employment" required></textarea>
+            <label for="previous_employment">Previous Employment:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="certifications" name="certifications" required></textarea>
+            <label for="certifications">Certifications:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="references" name="references" required></textarea>
+            <label for="references">References:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="contact_info" name="contact_info" required></textarea>
+            <label for="contact_info">Contact Information:</label>
+        </div>
+        <div class="user-box">
+            <textarea id="other_skills" name="other_skills" required></textarea>
+            <label for="other_skills">Other Skills:</label>
+        </div>
+    </div>
+    <button type="submit">Generate CV</button>
+</form>
+
+</body>
+</html>
