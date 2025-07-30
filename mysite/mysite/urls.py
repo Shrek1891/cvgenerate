@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from cvg.views import accept
+from cvg.views import accept, resume
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', accept),
+    path('', accept, name='accept'),
+    path('resume/<int:id>', resume, name='resume'),
 ]

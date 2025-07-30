@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'cvg/resume.css' %}?v=1.2">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="resume">
+    <div class=" header">
+        <h2>{{user.name}}</h2>
+        <p>{{user.email}}</p>
+        <p>{{user.mobile}}</p>
+    </div>
+
+    <div class="content">
+        <div class="content-left">
+            <p> Summary</p>
+            <p>{{user.summary}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-right">
+            <p>Projects</p>
+            <p>{{user.projects}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-left">
+            <p>Skills</p>
+            <p>{{user.skills}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-right">
+            <p>Experience</p>
+            <p>{{user.experience}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-left">
+            <p>Education</p>
+            <p>{{user.education}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-right">
+            <p>Interests</p>
+            <p>{{user.interests}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-left">
+            <p>Personal Information</p>
+            <p>{{user.personal_info}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-right">
+            <p>Work Experience</p>
+            <p>{{user.work_experience}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-left">
+            <p>Previous Employment</p>
+            <p>{{user.previous_employment}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-right">
+            <p>Certifications</p>
+            <p>{{user.certifications}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-left">
+            <p>References</p>
+            <p>{{user.references}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-right">
+            <p>Contact Information</p>
+            <p>{{user.contact_info}}</p>
+        </div>
+        <br>
+        <hr>
+        <div class="content-left">
+            <p>Other Skills</p>
+            <p>{{user.other_skills}}</p>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
