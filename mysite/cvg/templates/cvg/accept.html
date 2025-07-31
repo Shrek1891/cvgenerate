@@ -2,7 +2,7 @@
 {% load static %}
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{% static 'cvg/style.css' %}?v=1.1">
+    <link rel="stylesheet" href="{% static 'cvg/style.css' %}?v=1.2">
     <title>CV Generator</title>
     <meta charset="UTF-8">
     <title>CV Generator</title>
@@ -14,15 +14,15 @@
     {{ form.as_p }}
     <div class="group">
         <div class="user-box">
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required autocomplete="off">
             <label for="name">Name:</label>
         </div>
         <div class="user-box">
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required autocomplete="off">
             <label for="email">Email:</label>
         </div>
         <div class="user-box">
-            <input type="tel" id="mobile" name="mobile" required>
+            <input type="tel" id="mobile" name="mobile" required autocomplete="off" readonly onfocus="this.removeAttribute('readonly')">
             <label for="mobile">Mobile:</label>
         </div>
         <div class="user-box">

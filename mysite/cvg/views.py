@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from xhtml2pdf import pisa
 from cvg.models import CvProfile
 from django.template import loader
@@ -39,6 +39,7 @@ def accept(request):
                                                      other_skills=other_skills)
         if not created:
             cv_profile.save()
+        return redirect('resume', id=cv_profile.id)
     return render(request, 'cvg/accept.html')
 
 
