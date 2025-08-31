@@ -1,4 +1,6 @@
-Next project Django and vanilla JS calorie counter. That says it all
+My second Django project and vanilla JS
+Fill out the form and "voila" - you get a resume in PDF format
+
 
 pip install -r requirements.txt
 
